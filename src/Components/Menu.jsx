@@ -24,6 +24,7 @@ class Menu extends Component {
               <option value="qwer">qwer</option>
               <option value="azer">azer</option>
               <option value="azerqsdfwxcv1234">SC2 GOD</option>
+              <option value="1234">1234</option>
             </select>
           </div>
           <div>timer: 30</div>
