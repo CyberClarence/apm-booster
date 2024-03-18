@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #131516;
+  color: blanchedalmond;
+}
+
+button {
+  background-color: black;
+  border-color: red;
+  color: gray;
+  font-size: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+}
+
+#menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 400px;
+  height: 600px;
+
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-style: ridge;
+  border-width: 5px;
+  border-color: greenyellow;
+  border-radius: 2%;
+
+  font-size: large;
+}
+
+#menu > h2 {
+  color: red;
+  animation: rotation 2s linear infinite;
+}
+
+#menu > #menu-param {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#menu > button {
+  margin-top: 200px;
+}
+
+#result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 400px;
+  height: 600px;
+
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-style: ridge;
+  border-width: 5px;
+  border-color: greenyellow;
+  border-radius: 2%;
+
+  font-size: large;
+}
+
+/* pour le titre */
+#result > h3 {
+  font-size: 200%;
+  font-weight: lighter;
+  color: red;
+  margin-top: 10%;
+}
+
+/* pour les autres données */
+/* container */
+#result-stats {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* chaque div individuel avec 2 sous div (name et value) */
+#result-stats > div {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#result-stats > div > .name {
+  color: darksalmon;
+}
+
+/* affichage spécifique pour les apm */
+#result-stats > #result-APM {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+}
+/* le score en orange */
+#result-stats > #result-APM > span {
+  font-size: 200%;
+  font-style: larger;
+  color: orange;
+}
+/* le message en dessous */
+#result-stats > #result-APM > small {
+  color: grey;
+}
+
+#apm-test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 600px;
+  height: 600px;
+
+  display: flex;
+  justify-content: vertical;
+  flex-direction: column;
+
+  border-style: solid;
+  border-width: 5px;
+  border-color: blue;
+
+  user-select: none; /* pour pas que ça fasse un truc moche quand on clique */
+}
+
+.test-row {
+  display: flex;
+  flex-direction: row;
+  margin: 0%;
+  height: 100%;
+}
+
+.square {
+  border-style: solid;
+  border-color: red;
+  border-width: 1px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 400%;
+  background-color: black;
+}

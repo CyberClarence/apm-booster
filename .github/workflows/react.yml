@@ -1,0 +1,30 @@
+name: deployment on kysrv
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  job1:
+    runs-on: self-hosted
+
+    env:
+      CI: false
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Installing new potential dependencies
+        run: yarn install
+
+      - name: Building the new source code
+        run: yarn run build
+
+      - run: ls -la
+      - name: creating dir if not exit
+        run: mkdir -p ~/www/apm-booster
+      - name: Caching the new source code (for nginx)
+        run: cp -r ./build/* ~/www/apm-booster
+
+      - run: whoami
+      - name: Successfully deployed :]
+        run: echo "Deployment finished"
